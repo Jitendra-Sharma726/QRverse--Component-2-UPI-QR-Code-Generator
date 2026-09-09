@@ -1,0 +1,37 @@
+QRverse- Component 2 UPI QR Code Generator
+Welcome back to QRverse! In the first component, you learned how to convert any text into a QR code. Now, it's time to step into a real-world application: creating a UPI payment QR code — something you see every day at shops, donation sites, and bill counters.
+
+Problem Statement
+
+Your task is to build a Python program that takes basic UPI payment details from the user and generates a scannable UPI QR code.
+When someone scans the generated QR code with any UPI app (like Google Pay, PhonePe, or Paytm), it should pre-fill a payment screen with the given details.
+Prompt the user to enter:
+UPI ID (e.g., example@upi)
+Name of the receiver
+Amount (optional)
+Note or purpose of payment (optional)
+Generate a QR code using the UPI format:
+upi://pay?pa={UPI_ID}&pn={NAME}&am={AMOUNT}&tn={NOTE}
+Example Usage: upi://pay?pa=9315077XXX&pn=Anuj Shakya&am=1000&tn=dummy note
+Omit optional fields if left empty.
+
+Save the QR code as an image file (e.g., upi_qr.png)
+Print a success message after saving
+Example
+
+Input:
+
+Enter UPI ID: example@upi
+Enter receiver name: John Doe
+Enter amount (optional): 150
+Enter note (optional): Contest Entry Fee
+Output:
+
+UPI QR code saved as 'upi_qr.png'
+When scanned, this QR will:
+
+Open the UPI app
+Pre-fill payment to example@upi
+Receiver: John Doe
+Amount: ₹150
+Note: Contest Entry Fee
